@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter, ContentChildren, QueryList, AfterContentInit } from '@angular/core';
+import { Component, Output, EventEmitter, ContentChildren, QueryList, AfterContentInit, Input } from '@angular/core';
 import { WizardStepComponent } from './wizard-step.component';
 
 @Component({
@@ -43,21 +43,14 @@ export class WizardComponent implements AfterContentInit {
 
   @Output()
   onStepChanged: EventEmitter<WizardStepComponent> = new EventEmitter<WizardStepComponent>();
-
-  @Input() nextTextInput: string;
-  @Input() prevTextInput: string;
-  @Input() doneTextInput: string;
   
-  public nextText:string = "Next";
-  public prevText:string = "Previous";
-  public doneText:string = "Done";
+  @Input() nextText:string = "Next";
+  @Input() prevText:string = "Previous";
+  @Input() doneText:string = "Done";
 
   constructor() { }
 
   ngAfterContentInit() {
-    this.nextText = this.nextTextInput ? this.nextTextInput : this.nextText;
-    this.prevText = this.prevTextInput ? this.prevTextInput : this.prevText;
-    this.doneText = this.doneTextInput ? this.doneTextInput : this.doneText;
     this.wizardSteps.forEach(step => this._steps.push(step));
     this.steps[0].isActive = true;
   }
