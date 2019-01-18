@@ -1,6 +1,6 @@
 {
-  "name": "angular2-wizard",
-  "version": "0.3.0",
+  "name": "extended-angular2-wizard",
+  "version": "0.1.0",
   "scripts": {
     "build": "ngc -p tsconfig.json",
     "lint": "tslint src/**/*.ts",
@@ -10,13 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/maiyaporn/angular2-wizard"
+    "url": "https://github.com/cauehqueiroz/angular2-wizard"
   },
   "author": {
-    "name": "Maiyaporn Phanich",
-    "email": "p.maiyaporn@gmail.com"
+    "name": "Cauêh Queiroz",
+    "email": "contato@softcafe.com.br"
   },
   "keywords": [
+    "extended-angular2-wizard",
     "angular2-wizard",
     "form-wizard",
     "wizard",
@@ -26,7 +27,7 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/maiyaporn/angular2-wizard/issues"
+    "url": "https://github.com/cauehqueiroz/angular2-wizard/issues"
   },
   "main": "./dist/index.js",
   "dependencies": {
